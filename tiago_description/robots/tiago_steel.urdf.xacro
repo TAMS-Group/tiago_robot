@@ -39,5 +39,11 @@
   <xacro:pal_gripper parent="arm_tool_link" name="gripper">
     <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${90*deg_to_rad} ${-90*deg_to_rad}"/>
   </xacro:pal_gripper>
+
+  <link name="world" />
+  <joint type="planar" name="world_joint">
+    <parent link="world" />
+    <child link="base_footprint" />
+  </joint>
 </robot>
 
